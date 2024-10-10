@@ -21,5 +21,8 @@ let () =
 with
 |  DivisionByZero -> print_endline "Heres an error: Division by zero."
 
-
-
+module type Stack = sig
+  type 'a t 
+  val empty : 'a t
+  val is_empty : 'a t -> bool 
+  val push : 'a t
