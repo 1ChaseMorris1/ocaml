@@ -1,0 +1,25 @@
+let divide x y = 
+  if y = 0 then 
+    None
+else
+  Some (x / y)
+;;
+
+  (*another try catch but smaller*)
+let () = 
+  match divide 10 0 with 
+  | None -> print_endline "Heres the same error Divide by zero"
+  | Some result -> print_int result
+
+
+
+(*Try catch*)
+let () = 
+  try 
+    let result = divide 10 0 in 
+    print_int result
+with
+|  DivisionByZero -> print_endline "Heres an error: Division by zero."
+
+
+
